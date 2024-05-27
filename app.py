@@ -1,24 +1,30 @@
-import tkinter as tk
-import customtkinter as ctk 
+from tkinter import *
+import customtkinter 
 
 from PIL import ImageTk
 from authtoken import auth_token
 
 import torch
 from torch import autocast
-from diffusers import StableDiffusionPipeline 
+from diffusers import StableDiffusionPipeline
 
 # Create the app
-app = tk.Tk()
+app = customtkinter.CTk()
 app.geometry("532x632")
-app.title("Stable Bud") 
-ctk.set_appearance_mode("dark") 
+app.title("Creating Art with AI for People with Disabilities") 
+customtkinter.set_appearance_mode("dark") 
+customtkinter.set_appearance_mode("dark-blue")
 
-prompt = ctk.CTkEntry(height=40, width=512, text_font=("Arial", 20), text_color="black", fg_color="white") 
-prompt.place(x=10, y=10)
+prompt = customtkinter.CTkEntry(app,
+    placeholder_text="Enter the prompt",
+    height=40, width=480,
+    #corner_radius="50",
+    ) 
+prompt.pack(pady=20)
 
-lmain = ctk.CTkLabel(height=512, width=512)
-lmain.place(x=10, y=110)
+lmain = customtkinter.CTkLabel(app,height=512, width=512)
+lmain.pack(pady="100")
+
 
 modelid = "CompVis/stable-diffusion-v1-4"
 device = "cuda"
@@ -33,8 +39,11 @@ def generate():
     img = ImageTk.PhotoImage(image)
     lmain.configure(image=img) 
 
-trigger = ctk.CTkButton(height=40, width=120, text_font=("Arial", 20), text_color="white", fg_color="blue", command=generate) 
-trigger.configure(text="Generate") 
-trigger.place(x=206, y=60) 
+def clear():
+    prompt.delete(0,END)
 
+button_s=customtkinter.CTkButton(app,text="Generate")
+button_s.pack(pady=5)
+button_c=customtkinter.CTkButton(app,text="Clear",command=clear)
+button_c.pack(pady=5)
 app.mainloop()
