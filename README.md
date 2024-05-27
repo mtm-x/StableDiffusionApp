@@ -26,5 +26,3 @@ and huggingface [Diffusers](https://github.com/huggingface/diffusers) and the ap
     ```
 
 
-
-Still in development stage. May or may not work :)
