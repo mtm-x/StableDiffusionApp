@@ -19,10 +19,10 @@ and huggingface [Diffusers](https://github.com/huggingface/diffusers) and the ap
 
 3. Grab your Hugging Face API token from [Here](https://huggingface.co/docs/hub/security-tokens) and paste that token in `authtoken.py`
    
-4. And run the `updatedapp.py` with Visual studio code or any other IDE. Else just run in terminal
+4. And run the `app.py` with Visual studio code or any other IDE. Else just run in terminal
 
     ```
-    python updatedapp.py
+    python app.py
     ```
 
 
