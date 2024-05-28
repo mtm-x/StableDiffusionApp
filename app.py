@@ -11,7 +11,7 @@ from diffusers import StableDiffusionPipeline
 # Create the app
 app = customtkinter.CTk()
 app.geometry("532x632")
-app.title("Creating Art with AI for People with Disabilities") 
+app.title("Text to Image") 
 customtkinter.set_appearance_mode("dark") 
 customtkinter.set_appearance_mode("dark-blue")
 
@@ -21,9 +21,6 @@ prompt = customtkinter.CTkEntry(app,
     #corner_radius="50",
     ) 
 prompt.pack(pady=20)
-
-lmain = customtkinter.CTkLabel(app,height=512, width=512)
-lmain.pack(pady="100")
 
 
 modelid = "CompVis/stable-diffusion-v1-4"
