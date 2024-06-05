@@ -5,24 +5,18 @@ and huggingface [Diffusers](https://github.com/huggingface/diffusers) and the ap
 [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
 
 ## Getting started 
-1. Clone this repo
-   
-   ```
-    git clone https://github.com/nicknochnack/StableDiffusionApp
-   ```
+1. Clone this repo.
 
-2. Install required python libraries
+2. Install required python libraries.
 
    ```
     pip install -r requirements.txt
    ```
 
-3. Grab your Hugging Face API token from [Here](https://huggingface.co/docs/hub/security-tokens) and paste that token in `authtoken.py`
+3. Grab your Hugging Face API token from [Here](https://huggingface.co/docs/hub/security-tokens) and paste that token in `authtoken.py`.
    
-4. And run the `app.py` with Visual studio code or any other IDE. Else just run in terminal
+4. And run the `app.py` with Visual studio code or any other IDE. Else just run in terminal.
 
     ```
     python app.py
     ```
-
-
